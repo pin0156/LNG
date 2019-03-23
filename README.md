@@ -1,10 +1,5 @@
 # LNG
 
-## install package
-```
-sudo pip install tornado
-```
-
 ## build dic
 ```
 cd script
@@ -24,6 +19,12 @@ case4: 1,2,3
 ```
 
 ## web service test
+ * install www package
+```
+sudo pip install tornado
+```
+
+ *  start service
 ```
 cd www
 ./start.sh -v -v 0 1
