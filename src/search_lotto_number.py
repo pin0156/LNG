@@ -43,6 +43,7 @@ if __name__ == '__main__':
 		if not line:
 			break
 		line = line.strip()
+                line = line.replace(' ','')
 		if line == '' : continue
 		print line
 		val = lng.search_lotto_dic(line)
