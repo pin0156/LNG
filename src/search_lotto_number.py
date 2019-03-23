@@ -44,7 +44,9 @@ if __name__ == '__main__':
 			break
 		line = line.strip()
                 line = line.replace(' ','')
+                line = sorted([int(i) for i in line.split(',')])
+                line = [str(i) for i in line]
+                line = ','.join(line)
 		if line == '' : continue
-		print line
 		val = lng.search_lotto_dic(line)
 		print json.dumps(val, ensure_ascii=False, encoding='utf-8') + '\n'
