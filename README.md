@@ -22,7 +22,9 @@ input test:
 case1: 1
 case2: 45
 case3: 1,45
-case4: 1,2,3
+case4: 45,1
+case5: 1,2,3
+case6: 3,1,2
 ```
 
 ## web service test
