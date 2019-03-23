@@ -1,15 +1,22 @@
 # LNG
 
-## build dic
+## Requirement
+ * python2.7
+
+## How to use
+ * colone git
+```
+git clone https://github.com/pin0156/LNG.git
+```
+ * build dic
 ```
 cd script
 sh build_lotto_dic.sh
 ```
-
-## test
+ * test
 ```
 cd src
-./search_lotto_number.py --lotto_dic=../data/lotto_statistics.json
+./search_lotto_number.py
 
 input test:
 case1: 1
