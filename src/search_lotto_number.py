@@ -31,8 +31,7 @@ if __name__ == '__main__':
 
 	lotto_dic_path = options.lotto_dic
 	if lotto_dic_path == None:
-		parser.print_help()
-		exit()
+		lotto_dic_path = '../data/lotto_statistics.json'
 
 	lng = LNG(lotto_dic_path)
 
