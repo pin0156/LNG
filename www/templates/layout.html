@@ -7,17 +7,14 @@
   <link type="text/css" href="{{ static_url("css/dashboard.css") }}" rel="stylesheet" media="screen">
 </head>
 <body>
-  <div class="row">
-    <div style="width: 75%; margin: auto;">
-      <h1 style="text-align: center;">로또 연관 번호 통계 시스템</h1>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 main">
-            {% block pagetitle %}{% end %}
-            {% block content %}{% end %}
-          </div>
-        </div>
-      </div>
+  <div class="container-fluid" style="width: 95%; margin: auto;">
+    <h1 style="text-align: center;">로또 연관 번호 통계 시스템</h1>
+    <div class="col-sm-8 main">
+      {% block pagetitle %}{% end %}
+      {% block content %}{% end %}
+    </div>
+    <div class="col-sm-4 main">
+      {% block content-right %}{% end %}
     </div>
   </div>
   <script type="text/javascript" src="{{ static_url("js/jquery-1.10.2.min.js") }}"></script>

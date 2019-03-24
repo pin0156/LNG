@@ -3,69 +3,83 @@
 {% block pagetitle%}
 {% end %}
 
+{% block content-right %}
+<div class="row">
+  <div class="row">
+    <span class="label label-default">개발자에게 커피를 사주세요</span>
+  </div>
+  <div class="row">
+    <img src="{{ static_url("img/kakaoPay_1000.jpg") }}" alt="후원: 커피사주기" width="250" height="400">
+  </div>
+</div>
+{% end %}
+
 {% block content %}
 <div class="row">
   <div class="row" id="div_select_table">
     <span class="label label-default">번호 선택</span>
-    <div class="row" id="i_row_1">
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_1">1</input><label id="o_num_1"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_2">2</input><label id="o_num_2"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_3">3</input><label id="o_num_3"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_4">4</input><label id="o_num_4"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_5">5</input><label id="o_num_5"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_6">6</input><label id="o_num_6"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_7">7</input><label id="o_num_7"></label></div>
-    </div>
-    <div class="row" id="i_row_2">
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_8">8</input><label id="o_num_8"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_9">9</input><label id="o_num_9"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_10">10</input><label id="o_num_10"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_11">11</input><label id="o_num_11"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_12">12</input><label id="o_num_12"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_13">13</input><label id="o_num_13"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_14">14</input><label id="o_num_14"></label></div>
-    </div>
-    <div class="row" id="i_row_3">
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_15">15</input><label id="o_num_15"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_16">16</input><label id="o_num_16"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_17">17</input><label id="o_num_17"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_18">18</input><label id="o_num_18"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_19">19</input><label id="o_num_19"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_20">20</input><label id="o_num_20"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_21">21</input><label id="o_num_21"></label></div>
-    </div>
-    <div class="row" id="i_row_4">
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_22">22</input><label id="o_num_22"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_23">23</input><label id="o_num_23"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_24">24</input><label id="o_num_24"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_25">25</input><label id="o_num_25"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_26">26</input><label id="o_num_26"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_27">27</input><label id="o_num_27"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_28">28</input><label id="o_num_28"></label></div>
-    </div>
-    <div class="row" id="i_row_5">
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_29">29</input><label id="o_num_29"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_30">30</input><label id="o_num_30"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_31">31</input><label id="o_num_31"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_32">32</input><label id="o_num_32"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_33">33</input><label id="o_num_33"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_34">34</input><label id="o_num_34"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_35">35</input><label id="o_num_35"></label></div>
-    </div>
-    <div class="row" id="i_row_6">
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_36">36</input><label id="o_num_36"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_37">37</input><label id="o_num_37"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_38">38</input><label id="o_num_38"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_39">39</input><label id="o_num_39"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_40">40</input><label id="o_num_40"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_41">41</input><label id="o_num_41"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_42">42</input><label id="o_num_42"></label></div>
-    </div>
-    <div class="row" id="i_row_7">
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_43">43</input><label id="o_num_43"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_44">44</input><label id="o_num_44"></label></div>
-      <div class="col-md-1"><input type="checkbox" onclick="search()" id="i_num_45">45</input><label id="o_num_45"></label></div>
-    </div>
+    <p> 번호를 선택하세요. 과거 당첨 번호를 기반으로, 동시에 출현한 번호들을 보여줍니다. (최대 5개 선택 가능)</p>
+    <table class="table" border=0>
+      <tr id="i_row_1" border=0>
+        <td><input type="checkbox" onclick="search()" id="i_num_1">1</input><label id="o_num_1"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_2">2</input><label id="o_num_2"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_3">3</input><label id="o_num_3"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_4">4</input><label id="o_num_4"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_5">5</input><label id="o_num_5"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_6">6</input><label id="o_num_6"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_7">7</input><label id="o_num_7"></label></td>
+      </tr>
+      <tr id="i_row_2" border=0>
+        <td><input type="checkbox" onclick="search()" id="i_num_8">8</input><label id="o_num_8"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_9">9</input><label id="o_num_9"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_10">10</input><label id="o_num_10"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_11">11</input><label id="o_num_11"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_12">12</input><label id="o_num_12"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_13">13</input><label id="o_num_13"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_14">14</input><label id="o_num_14"></label></td>
+      </tr>
+      <tr id="i_row_3">
+        <td><input type="checkbox" onclick="search()" id="i_num_15">15</input><label id="o_num_15"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_16">16</input><label id="o_num_16"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_17">17</input><label id="o_num_17"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_18">18</input><label id="o_num_18"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_19">19</input><label id="o_num_19"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_20">20</input><label id="o_num_20"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_21">21</input><label id="o_num_21"></label></td>
+      </tr>
+      <tr id="i_row_4">
+        <td><input type="checkbox" onclick="search()" id="i_num_22">22</input><label id="o_num_22"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_23">23</input><label id="o_num_23"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_24">24</input><label id="o_num_24"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_25">25</input><label id="o_num_25"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_26">26</input><label id="o_num_26"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_27">27</input><label id="o_num_27"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_28">28</input><label id="o_num_28"></label></td>
+      </tr>
+      <tr id="i_row_5">
+        <td><input type="checkbox" onclick="search()" id="i_num_29">29</input><label id="o_num_29"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_30">30</input><label id="o_num_30"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_31">31</input><label id="o_num_31"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_32">32</input><label id="o_num_32"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_33">33</input><label id="o_num_33"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_34">34</input><label id="o_num_34"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_35">35</input><label id="o_num_35"></label></td>
+      </tr>
+      <tr id="i_row_6">
+        <td><input type="checkbox" onclick="search()" id="i_num_36">36</input><label id="o_num_36"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_37">37</input><label id="o_num_37"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_38">38</input><label id="o_num_38"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_39">39</input><label id="o_num_39"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_40">40</input><label id="o_num_40"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_41">41</input><label id="o_num_41"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_42">42</input><label id="o_num_42"></label></td>
+      </tr>
+      <tr id="i_row_7">
+        <td><input type="checkbox" onclick="search()" id="i_num_43">43</input><label id="o_num_43"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_44">44</input><label id="o_num_44"></label></td>
+        <td><input type="checkbox" onclick="search()" id="i_num_45">45</input><label id="o_num_45"></label></td>
+      </tr>
+    </table>
   </div>
   <br>
   <div class="row" id="div_output_table">
@@ -101,8 +115,8 @@
         }
       }
     }
-    if (check_cnt > 6) {
-      alert('6개 이상 선택은 할 수 없습니다.')
+    if (check_cnt > 5) {
+      alert('5개 이상 선택은 할 수 없습니다.')
       input_list = ''
     }
     return input_list
@@ -130,6 +144,12 @@
       line = '<tr><td>' + ord + '</td><td>' + key + '</td><td>' + val + '</td></tr>'
       body_html = body_html + line
     }
+    $('#table_print_output_body').append(body_html)
+  }
+
+  function _print_empty_table()
+  {
+    body_html = '<tr><td> - </td><td> - </td><td> - </td></tr>'
     $('#table_print_output_body').append(body_html)
   }
 
@@ -166,8 +186,12 @@
         if (json_data['status'] == 200){
           var output = json_data['output']
           //console.log(output)
-          _print_output_table(output)
-          _print_output_label(output)
+          if (output) {
+            _print_output_table(output)
+            //_print_output_label(output)
+          } else {
+            _print_empty_table(output)
+          }
         } else {
           alert("error")
         }
@@ -181,7 +205,7 @@
   function search()
   {
     _clear_output_table()
-    _clear_output_label()
+    //_clear_output_label()
     var input_list = _get_select_list()
     if (input_list != '') {
       console.log(input_list)
