@@ -33,6 +33,20 @@ class HCheckHandler(BaseHandler):
             fid.close()
             self.render(hdn_filename)
 
+class LNGReloadDicHandler(BaseHandler):
+    def get(self):
+        try:
+            b_success = self.lng.reload_lotto_dic('./data/lotto_statistics.json')
+            self.log.info('ReloadDic:' + str(b_success))
+        except:
+            b_success = False
+            self.log.info('ReloadDic:' + str(b_success))
+        ret = {}
+        ret['status'] = 200
+        ret['success'] = b_success
+        self.write(ret)
+        self.finish()
+
 class LNGHandler(BaseHandler):
     def get_request_ip(self):
         client_ip = self.request.headers.get("X-Forwarded-For")
@@ -41,7 +55,7 @@ class LNGHandler(BaseHandler):
             client_ip = self.request.remote_ip
         return client_ip
 
-    def get(self) :
+    def get(self):
         # check ip
         #client_ip = self.get_request_ip()
         #if self.localhost_ip != client_ip:

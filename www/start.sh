@@ -108,7 +108,7 @@ check_running ${daemon_name}
 
 # copy resources
 function copy_resources {
-    cp -rf ${PDIR}/src/*.py ${CDIR}/lib/.
+	cp -rf ${PDIR}/src/*.py ${CDIR}/lib/.
 	cp -rf ${PDIR}/data/lotto_statistics.json ${CDIR}/data/.
 }
 copy_resources

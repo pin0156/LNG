@@ -19,7 +19,7 @@ import tornado.process
 import tornado.autoreload as autoreload
 
 from tornado.options import define, options
-from handlers.index import IndexHandler, HCheckHandler, LNGHandler
+from handlers.index import IndexHandler, HCheckHandler, LNGHandler, LNGReloadDicHandler
 import socket
 
 sys.path.append(os.path.abspath('.'))
@@ -67,6 +67,7 @@ class Application(tornado.web.Application):
             (r'/', IndexHandler),
             (r'/_hcheck.hdn', HCheckHandler),
             (r'/LNG', LNGHandler),
+            (r'/LNG_reload_dic', LNGReloadDicHandler)
         ]
 
         tornado.web.Application.__init__(self, handlers, **settings)
@@ -77,7 +78,7 @@ class Application(tornado.web.Application):
         self.log.info('initialize...')
         self.log.info('tornado.version' + str(tornado.version_info))
 
-        self.lng = search_lotto_number.LNG('data/lotto_statistics.json')
+        self.lng = search_lotto_number.LNG('./data/lotto_statistics.json')
         self.localhost_ip = socket.gethostbyname(socket.gethostname())
 
         self.log.info('initialize... done')
