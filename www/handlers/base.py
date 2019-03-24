@@ -9,3 +9,6 @@ class BaseHandler(tornado.web.RequestHandler):
     @property
     def lng(self):
         return self.application.lng
+    @property
+    def localhost_ip(self):
+        return self.application.localhost_ip

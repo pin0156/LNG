@@ -20,6 +20,7 @@ import tornado.autoreload as autoreload
 
 from tornado.options import define, options
 from handlers.index import IndexHandler, HCheckHandler, LNGHandler
+import socket
 
 sys.path.append(os.path.abspath('.'))
 
@@ -77,6 +78,7 @@ class Application(tornado.web.Application):
         self.log.info('tornado.version' + str(tornado.version_info))
 
         self.lng = search_lotto_number.LNG('data/lotto_statistics.json')
+        self.localhost_ip = socket.gethostbyname(socket.gethostname())
 
         self.log.info('initialize... done')
 

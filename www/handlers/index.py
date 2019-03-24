@@ -34,7 +34,20 @@ class HCheckHandler(BaseHandler):
             self.render(hdn_filename)
 
 class LNGHandler(BaseHandler):
+    def get_request_ip(self):
+        client_ip = self.request.headers.get("X-Forwarded-For")
+        client_ip = self.request.remote_ip
+        if not client_ip :
+            client_ip = self.request.remote_ip
+        return client_ip
+
     def get(self) :
+        # check ip
+        #client_ip = self.get_request_ip()
+        #if self.localhost_ip != client_ip:
+        #    self.write((dict(success=True, status=500, output='', client_ip=client_ip, localhost_ip=self.localhost_ip)))
+
+        #else:
         start_time = time.time()
         
         mode  = self.get_argument('mode', '')
@@ -47,6 +60,7 @@ class LNGHandler(BaseHandler):
         if mode == 'debug' : rst['debug'] = debug
 
         try :
+            # get params
             params = { k: self.get_argument(k) for k in self.request.arguments }
             #self.log.info(json.dumps(params,ensure_ascii=False,encoding="utf-8"))
             template = ''
@@ -93,27 +107,5 @@ class LNGHandler(BaseHandler):
         self.finish()
 
     def post(self):
-        try :
-            content = self.get_argument('content', "", True)
-            content = content.encode('utf-8')
-        except Exception, e :
-            ret = str(e)
-            self.write(dict(success=True, info=ret))
-        else :    
-            startTime = time.time()
-            params = { k: self.get_argument(k) for k in self.request.arguments }
-            #self.log.info(json.dumps(params,ensure_ascii=False,encoding="utf-8"))
-            template = ''
-            key_value = {}
-            for k,v in params.items():
-                key_value[k] = v
-            if key_value['query']:
-                query = key_value['query']
-            else:
-                query="1"
-            out = self.lng.search_lotto_dic(query)
+        self.get()
 
-            durationTime = time.time() - startTime
-            self.write(dict(success=True, output=out))
-
-        self.finish()
