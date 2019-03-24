@@ -17,11 +17,13 @@ if [ $last_lotto_num_in_file -eq $end_lotto_num ]; then
 	exit
 fi
 
+URL="https://www.nlotto.co.kr/common.do"
+#URL="https://dhlottery.co.kr/common.do"
 outfile=../data/lotto_data.json
 echo "download lotto date: $start_lotto_num ~ $end_lotto_num"
 echo "update lotto data file: $outfile"
 for i in `seq $start_lotto_num $end_lotto_num`
 do
-	wget --no-check-certificate -O- "https://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=$i" >> $outfile
+	wget --no-check-certificate -O- "${URL}?method=getLottoNumber&drwNo=$i" >> $outfile
 	echo "" >> $outfile
 done
