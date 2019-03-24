@@ -12,8 +12,8 @@ PDIR=`dirname $CDIR`
 
 # server 
 daemon_name='lng_dm.py'
-port_devel=8888
-port_service=8889
+port_devel=8080
+port_service=80
 
 # resources
 DATA_DIR=${PDIR}/data
