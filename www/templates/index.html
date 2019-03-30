@@ -81,9 +81,15 @@
       </tr>
     </table>
   </div>
-  <br>
+  <div class="row" id="div_select_lotto_num">
+    <span class="label label-default">선택한 번호</span>
+    <table class="table" id="table_select_lotto_num">
+      <thead><tr><th>선택한 번호</th></tr></thead>
+      <tr><td><label id="o_select_lotto_num"></label></td></tr>
+    </table>
+  </div>
   <div class="row" id="div_output_table">
-  <span class="label label-default">연관 번호 출력</span>
+    <span class="label label-default">연관 번호 출력</span>
     <table class="table" id="table_print_output">
       <thead><tr><th>연관 번호 등수</th><th>연관 번호</th><th>동시 출현 빈도</th></tr></thead>
       <tbody id="table_print_output_body"></tbody>
@@ -111,7 +117,7 @@
           input_list = input_list + i
         }
         else {
-          input_list = input_list + ',' + i
+          input_list = input_list + ', ' + i
         }
       }
     }
@@ -206,9 +212,12 @@
   {
     _clear_output_table()
     //_clear_output_label()
+
     var input_list = _get_select_list()
+    //console.log(input_list)
+
+    $('#o_select_lotto_num').text(input_list)
     if (input_list != '') {
-      console.log(input_list)
       _search_api(input_list)
     }
   }
