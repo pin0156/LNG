@@ -136,7 +136,9 @@
     var ord_dict = {};
     var i;
     for (i=0; i<output.length; i++) {
-      [key, val] = output[i].split(":")
+      var data = output[i].split(":")
+      var key = data[0]
+      var val = data[1]
       val_dict[key] = val
       ord_dict[key] = i+1
     }
@@ -145,11 +147,13 @@
 
   function _print_output_table(output)
   {
-    body_html = ''
+    var body_html = '';
     for (i=0; i<output.length; i++) {
-      [key, val] = output[i].split(":")
-      ord = i+1
-      line = '<tr><td>' + ord + '</td><td>' + key + '</td><td>' + val + '</td></tr>'
+      var data = output[i].split(":")
+      var key = data[0]
+      var val = data[1]
+      var ord = i+1
+      var line = '<tr><td>' + ord + '</td><td>' + key + '</td><td>' + val + '</td></tr>'
       body_html = body_html + line
     }
     $('#table_print_output_body').append(body_html)
@@ -157,7 +161,7 @@
 
   function _print_empty_table()
   {
-    body_html = '<tr><td> - </td><td> - </td><td> - </td></tr>'
+    var body_html = '<tr><td> - </td><td> - </td><td> - </td></tr>'
     $('#table_print_output_body').append(body_html)
   }
 
@@ -168,7 +172,9 @@
 
   function _print_output_label(output)
   {
-    [val_dict, ord_dict] = _output_parsing(output)
+    var dicts = _output_parsing(output)
+    var val_dict = dicts[0]
+    var ord_dict = dicts[1]
     for (var key in val_dict) {
       label = ' [' + ord_dict[key] + '(' + val_dict[key] + ')]'
       $('#o_num_'+key).text(label)
@@ -177,7 +183,7 @@
 
   function _clear_output_label()
   {
-    for (i=1; i<=45; i++) {
+    for (var i=1; i<=45; i++) {
       $('#o_num_'+i).text('')
     }
   }
